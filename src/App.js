@@ -4,15 +4,20 @@ import Todo from './Todo'
 import TodoForm from './TodoForm'
 
 
-
 const App = () => {
   const [todos, setTodos] = useState([
-    {text: "learn about react",
-  isCompleted: false },
-    {text: "meet yash" ,
-    isCompleted: false},
-    {text: "drink water",
-    isCompleted: false}
+    {
+      text: "learn about react",
+      isCompleted: false 
+  },
+    {
+      text: "meet friends" ,
+      isCompleted: false
+  },
+    {
+      text: "drink water",
+      isCompleted: false
+  }
   ])
 
   const addTodo = text => {
@@ -24,7 +29,7 @@ const App = () => {
      newTodos[index].isCompleted = true
      setTodos(newTodos)
    }
-   const removeTodo = ({index}) => {
+   const removeTodo = index => {
     const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos)
